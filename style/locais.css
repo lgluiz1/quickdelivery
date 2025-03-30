@@ -1,0 +1,43 @@
+
+.locais {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    max-height: 450px;
+    background: linear-gradient(90deg,#c20606,#7c0202,#ff3535,#b70000);
+    background-size: 240% 240%;
+    animation: gradient-animation 24s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  svg {
+    width: 90%;
+    max-width: 800px;
+}
+path {
+    fill: #dcdcdc; /* Cinza padrão para estados não atendidos */
+    stroke: #ffffff;
+    stroke-width: 1.5;
+    transition: fill 0.3s ease-in-out;
+}
+/* Estados atendidos (Destacados em azul) */
+.atendido {
+    fill: #007bff;
+}
+/* Animação ao passar o mouse */
+.atendido:hover {
+    fill: #ff5733;
+    cursor: pointer;
+}
